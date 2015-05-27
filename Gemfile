@@ -44,3 +44,26 @@ group :development, :test do
   gem 'spring'
 end
 
+
+gem 'bootstrap-sass'
+gem 'high_voltage'
+gem 'slim-rails'
+gem 'unicorn'
+gem 'unicorn-rails'
+
+group :development do
+  gem 'better_errors'
+  gem 'haml2slim'
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-rescue'
+  gem 'rubocop'
+end
+
