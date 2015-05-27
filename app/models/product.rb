@@ -1,14 +1,14 @@
-# == Schema Information
-#
-# Table name: products
-#
-#  id         :integer          not null, primary key
-#  name       :string
-#  amount     :float
-#  quantity   :integer
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#
+    # == Schema Information
+    #
+    # Table name: products
+    #
+    #  id         :integer          not null, primary key
+    #  name       :string
+    #  amount     :float
+    #  quantity   :integer
+    #  created_at :datetime         not null
+    #  updated_at :datetime         not null
+    #
 
 class Product < ActiveRecord::Base
   def self.group_by_day
@@ -17,11 +17,11 @@ class Product < ActiveRecord::Base
   end
 
   def self.quantity_by_day
-    # returns an array of hashes contaning the date and time
+    # returns an array of hashes, each containing the date and quantity
     quantity_array = []
     self.group_by_day.each do |day, products|
       quantity_array << {
-        date: day.to_s, 
+        date: day.to_s(:db), 
         quantity: products.map(&:quantity).sum
       }
     end
@@ -33,7 +33,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.quantity_by_week
-    ...
+    # ...
   end
 
   def self.group_by_month
@@ -41,7 +41,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.quantity_by_month
-    ...
+    # ...
   end
 
 end

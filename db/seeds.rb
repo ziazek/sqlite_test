@@ -7,12 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 t = Time.now
-100.times do |n|
-  p = Product.create(name: Faker::Commerce.product_name, amount: Faker::Commerce.price, quantity: (rand()*10.round) )
-  p.created_at = t 
-  p.save 
-  t = t - 18.days
-end
+# 300.times do |n|
+#   p = Product.create(name: Faker::Commerce.product_name, amount: Faker::Commerce.price, quantity: (rand()*10.round) )
+#   p.created_at = t 
+#   p.save 
+#   t = t - 6.days
+# end
+# 100.times do |n|
+#   p = Product.create(name: Faker::Commerce.product_name, amount: Faker::Commerce.price, quantity: (rand()*10.round) )
+#   p.created_at = t 
+#   p.save 
+#   t = t - 18.days
+# end
 
 # == Schema Information
 #
